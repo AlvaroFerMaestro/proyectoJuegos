@@ -1,0 +1,91 @@
+.trivialContainer {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+  
+  .title {
+    margin-top: 40px;
+    font-size: 50px;
+    height: auto;
+  }
+  
+  .pregunta {
+    font-size: 30px;
+    text-align: center;
+  }
+  
+  .contenedorPregunta {
+    margin-top: 20px;
+    height: auto;
+  }
+  
+  .contenedorRespuestas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .botonRespuesta {
+    width: 200px;
+    height: 60px;
+    font-size: 18px;
+    background: rgba(198, 197, 197, 0.747);
+    border-radius: 10px;
+    border: 1px solid green;
+  }
+  
+  .botonSiguientePregunta {
+    width: 170px;
+    height: 60px;
+    font-size: 15px;
+    background: rgba(255, 255, 255, 0.799);
+    border-radius: 10px;
+    border: 1px solid black;
+    color: rgb(41, 40, 40);
+  }
+  
+  .divPuntuacionFinal {
+    margin-top: 30px;
+    height: 150px;
+    font-size: 30px;
+
+  }
+  
+  .botonReiniciar {
+    width: 200px;
+    height: 80px;
+    background: rgba(198, 197, 197, 0.747);
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 18px;
+  }
+  
+  .contenedorPuntuacion {
+    color: black;
+    font-size: 30px;
+  }
+
+
+  .botonInicio2{
+    cursor: pointer;
+    position: absolute;
+    bottom: 60px;
+    left: 30px;
+    padding: 5px 30px;
+    font-size: 20px;
+}
+
+
+@media screen and (max-width: 400px) {
+  .pregunta {
+    font-size: 10px;
+  }
+}
