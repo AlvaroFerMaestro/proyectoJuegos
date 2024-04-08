@@ -3,15 +3,15 @@
     display: grid;
     justify-content: center;
     justify-items: center;
-    padding-top: 30px;
-    grid-template-columns: repeat(4, 130px);
-    grid-template-rows: repeat(4, 100px);
-    gap: 10px;
+    padding-top: 40px;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(4, 200px);
+    grid-template-rows: repeat(4, 200px);
   }
   
   .card {
-    width: 100px;
-    height: 200;
+    width: 190px;
+    height: 190px;
     border: 2px solid rgb(165, 101, 101);
     display: flex;
     align-items: center;
@@ -38,18 +38,74 @@
     bottom: 60px;
     left: 30px;
     padding: 5px 30px;
-    font-size: 20px;
+    font-size: 40px;
+}
+
+@media screen and (max-width: 1000px) {
+    #memory-game {
+      grid-template-columns: repeat(4, 150px);
+      grid-template-rows: repeat(4, 150px);
+      gap: 30px;
+  }
+  .card {
+    width: 150px;
+    height: 150px;
+  }
+
+  .botonInicio1{
+    cursor: pointer;
+    position: absolute;
+    bottom: 100px;
+    left: 100px;
+    padding: 10px 30px;
+    font-size: 50px;
+  }
+}
+
+
+@media screen and (max-width: 750px) {
+  #memory-game {
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    gap: 30px;
+}
+.card {
+  width: 100px;
+  height: 100px;
+}
+
+.botonInicio1{
+  cursor: pointer;
+  position: absolute;
+  bottom: 100px;
+  left: 100px;
+  padding: 10px 30px;
+  font-size: 30px;
+}
+}
+
+@media screen and (max-width: 500px) {
+  #memory-game {
+    grid-template-columns: repeat(4, 200px);
+    grid-template-rows: repeat(4, 200px);
+    gap: 30px;
+}
+
+.card {
+  width: 200px;
+  height: 200px;
+}
+
+.botonInicio1{
+  cursor: pointer;
+  position: absolute;
+  bottom: 100px;
+  left: 100px;
+  padding: 10px 30px;
+  font-size: 50px;
+}
+
 }
 
   
 
-  @media screen and (max-width: 500px) {
-    #memory-game {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      margin-left: 20px;
-      margin-right: 20px;
-      gap: 10px;
-    }
-  }

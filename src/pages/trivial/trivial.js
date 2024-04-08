@@ -1,5 +1,6 @@
-import { inicio } from "../../components/Pagina-Inicio/incio";
 import "./trivial.css";
+import { inicio } from "../../components/Pagina-Inicio/incio";
+
 export const baseDatosTrivial = [
     {
         id: 1,
@@ -139,20 +140,11 @@ export const createTrivial = (divApp) => {
   const trivialContainer = document.createElement('div')
   trivialContainer.className = 'trivialContainer'
   divApp.append(trivialContainer)
-
+  
   const title = document.createElement('p')
   title.className = 'title'
   title.innerText = 'Trivial Marvel'
   trivialContainer.append(title)
-
-  const buttonInicio = document.createElement("button");
-  buttonInicio.classList = "botonInicio2";
-  buttonInicio.textContent = "Inicio";
-  trivialContainer.append(buttonInicio);
-  buttonInicio.addEventListener("click", () => {
-    inicio(divApp);
-  });
-  
 
   let preguntasMezcladas = []
   let indicePreguntaActual = 0
@@ -177,6 +169,14 @@ export const createTrivial = (divApp) => {
     const contenedorPregunta = document.createElement('div')
     contenedorPregunta.className = 'contenedorPregunta'
     trivialContainer.append(contenedorPregunta)
+
+    const buttonInicio = document.createElement("button");
+  buttonInicio.classList = "botonInicio1";
+  buttonInicio.textContent = "Inicio";
+  buttonInicio.addEventListener("click", () => {
+      inicio(divApp);
+  });
+  trivialContainer.appendChild(buttonInicio)
 
     const pregunta = document.createElement('p')
     pregunta.className = 'pregunta'
@@ -234,7 +234,9 @@ export const createTrivial = (divApp) => {
     contenedorPuntuacion.className = 'contenedorPuntuacion'
     contenedorPuntuacion.innerHTML = `Puntuación: ${puntuacion}`
     trivialContainer.append(contenedorPuntuacion)
+
   }
+
 
   const mostrarPuntuacionFinal = () => {
     trivialContainer.innerHTML = ''

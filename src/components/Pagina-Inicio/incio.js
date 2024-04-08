@@ -35,7 +35,7 @@ export const inicio = (divApp) => {
     divApp.innerHTML = ``
     createTrivial(divApp)
    })
-
+    
 
 
 
